@@ -82,7 +82,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		onEachFeature: function (feature, layer) {
     var popup = '';
     for (var clave in feature.properties) {
-      var title = geo_csv.getPropertyTitle(clave);
+      var title = geoLayer.getPropertyTitle(clave);
       popup += '<b>'+title+'</b><br />'+feature.properties[clave]+'<br /><br />';
     }
     layer.bindPopup(popup);
