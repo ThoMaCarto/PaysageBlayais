@@ -75,23 +75,21 @@ north.addTo(map);
 ///Charger les données CSV
 
 $.get('doc/db_img_blayais.csv', function(csvContents) {
-    var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ';',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],});
+    var geoLayer = L.geoCsv(csvContents, {
+		firstLineTitles: true, 
+		fieldSeparator: ';',
+		titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],
+		onEachFeature: function (feature, layer) {
+    var popup = '';
+    for (var clave in feature.properties) {
+      var title = geo_csv.getPropertyTitle(clave);
+      popup += '<b>'+title+'</b><br />'+feature.properties[clave]+'<br /><br />';
+    }
+    layer.bindPopup(popup);
+  }
+		});
     map.addLayer(geoLayer);
 	console.log (geoLayer);
   });
  
 
-var geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ';',lineSeparator: '\n',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],}); 
-
-$.ajax ({
-  type:'GET',
-  dataType:'text',
-  url:'doc/db_img_blayais.csv',
-  error: function() {
-    alert('No se pudieron cargar los datos');
-  },
-  success: function(csv) {
-    geocsv.addData(csv);
-    map.addLayer(geocsv);
-  }
-});
