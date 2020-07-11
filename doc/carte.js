@@ -81,6 +81,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],
 		onEachFeature:function (feature,layer){
 			layer.bindPopup("<b>"+feature.properties.filename+"</b>");
+			console.log(feature.getPropertyTitle);
 		}
 		
 		
