@@ -59,7 +59,7 @@ L.control.scale(
 }).addTo(map);
 
 //flèche du nord
-var urlNorthArray = '<img src="aceG8oMc4.png" style="width:30px;">'
+var urlNorthArray = '<img src="doc/aceG8oMc4.png" style="width:30px;">'
 var north = L.control(
 {
 	position: "topleft"
