@@ -28,7 +28,6 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 		[55, 9]
 	],
 });
-osmfr.addTo(map);
 map.setView([44.4122, -0.5603], 9);
 
 /*///paramètrage de la vue dela carte
@@ -47,7 +46,7 @@ var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
 	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br>' + attribMARGINOV,
 	opacity: 0.8,
 	maxZoom: 19,
-});
+}).addTo(map);
 
 
 //échelle
