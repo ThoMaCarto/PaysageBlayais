@@ -28,7 +28,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 		[55, 9]
 	],
 });
-map.setView([45.0938,-0.6413], 9);
+map.setView([45.24724,-0.62619], 13);
 
 /*///paramètrage de la vue dela carte
 var centerMaptest = [coucheTerritoires.getBounds().getCenter().lat,coucheTerritoires.getBounds().getCenter().lng];
@@ -79,6 +79,10 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		firstLineTitles: true, 
 		fieldSeparator: ';',
 		titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],
+		onEachFeature:function (feature,layer){
+			var popup ="test";
+		}
+		layer.bindPopup(popup);
 		/*onEachFeature: function (feature, layer) {
 			var popup = '';
     for (var clave in feature.properties) {
