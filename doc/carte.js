@@ -80,9 +80,9 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		fieldSeparator: ';',
 		titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],
 		onEachFeature:function (feature,layer){
-			var popup ="test";
-		};
-		layer.bindPopup(popup);
+			layer.bindPopup("test");
+		}
+		
 		
 		});
     map.addLayer(geoLayer);
