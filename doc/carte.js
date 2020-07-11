@@ -74,7 +74,22 @@ north.addTo(map);
 
 ///Charger les données CSV
 
-$.get('doc/db_img_blayais.csv', function(csvContents) {
+/*$.get('doc/db_img_blayais.csv', function(csvContents) {
     var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ';'});
     map.addLayer(geoLayer);
-  });
+  });*/
+ 
+
+var mi_geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ','}); 
+$.ajax ({
+  type:'GET',
+  dataType:'text',
+  url:'doc/db_img_blayais.csv',
+  error: function() {
+    alert('No se pudieron cargar los datos');
+  },
+  success: function(csv) {
+    mi_geocsv.addData(csv);
+    mapa.addLayer(mi_geocsv);
+  }
+});
