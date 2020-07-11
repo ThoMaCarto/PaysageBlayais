@@ -79,14 +79,14 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		firstLineTitles: true, 
 		fieldSeparator: ';',
 		titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],
-		onEachFeature: function (feature, layer) {
-    var popup = '';
+		/*onEachFeature: function (feature, layer) {
+			var popup = '';
     for (var clave in feature.properties) {
       var title = geoLayer.getPropertyTitle(clave);
       popup += '<b>'+title+'</b><br />'+feature.properties[clave]+'<br /><br />';
     }
     layer.bindPopup(popup);
-  }
+  }*/
 		});
     map.addLayer(geoLayer);
 	console.log (geoLayer);
