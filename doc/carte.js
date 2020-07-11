@@ -74,13 +74,13 @@ north.addTo(map);
 
 ///Charger les données CSV
 
-/*$.get('doc/db_img_blayais.csv', function(csvContents) {
-    var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ';'});
+$.get('doc/db_img_blayais.csv', function(csvContents) {
+    var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ';',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],});
     map.addLayer(geoLayer);
-  });*/
+  });
  
 
-var mi_geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ';',lineSeparator: '\n',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],}); 
+var geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ';',lineSeparator: '\n',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],}); 
 
 $.ajax ({
   type:'GET',
@@ -90,7 +90,7 @@ $.ajax ({
     alert('No se pudieron cargar los datos');
   },
   success: function(csv) {
-    mi_geocsv.addData(csv);
-    map.addLayer(mi_geocsv);
+    geocsv.addData(csv);
+    map.addLayer(geocsv);
   }
 });
