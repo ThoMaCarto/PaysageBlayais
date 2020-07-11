@@ -28,7 +28,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 		[55, 9]
 	],
 });
-
+osmfr.addTo(map);
 map.setView([44.4122, -0.5603], 9);
 
 /*///paramètrage de la vue dela carte
