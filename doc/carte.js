@@ -80,7 +80,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		fieldSeparator: ';',
 		titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],
 		onEachFeature:function (feature,layer){
-			layer.bindPopup('<img src="'+feature.properties.filename+'" alt="test" width="100">');
+			layer.bindPopup('<b>'+feature.properties.lat+'|'+feature.properties.lng+'</b><br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			
 		}
 		
