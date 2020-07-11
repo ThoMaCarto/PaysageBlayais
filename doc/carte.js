@@ -80,7 +80,8 @@ north.addTo(map);
   });*/
  
 
-var mi_geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ','}); 
+var mi_geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ';'}); 
+
 $.ajax ({
   type:'GET',
   dataType:'text',
@@ -90,6 +91,6 @@ $.ajax ({
   },
   success: function(csv) {
     mi_geocsv.addData(csv);
-    mapa.addLayer(mi_geocsv);
+    map.addLayer(mi_geocsv);
   }
 });
