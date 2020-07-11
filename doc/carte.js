@@ -77,6 +77,7 @@ north.addTo(map);
 $.get('doc/db_img_blayais.csv', function(csvContents) {
     var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ';',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],});
     map.addLayer(geoLayer);
+	console.log (geoLayer);
   });
  
 
