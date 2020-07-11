@@ -80,7 +80,7 @@ north.addTo(map);
   });*/
  
 
-var mi_geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ';'}); 
+var mi_geocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ';',lineSeparator: '\n',titles: ['Filename','Date','Auteur','User comment','lat', 'lng'],}); 
 
 $.ajax ({
   type:'GET',
