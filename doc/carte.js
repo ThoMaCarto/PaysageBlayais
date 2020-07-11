@@ -70,3 +70,11 @@ north.onAdd = function(map)
 	return div;
 }
 north.addTo(map);
+
+
+///Charger les données CSV
+
+$.get('doc/db_img_blayais.csv', function(csvContents) {
+    var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ';'});
+    map.addLayer(geoLayer);
+  });
