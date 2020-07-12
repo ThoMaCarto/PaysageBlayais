@@ -147,7 +147,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		{
 			var markers = cluster.getAllChildMarkers();
 			var n = markers.length;
-			var e = n * 6;
+			var e = n * 3;
 			var f = e;
 			return L.divIcon(
 			{
