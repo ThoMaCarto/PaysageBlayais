@@ -119,7 +119,31 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		
 		
 		});
-    map.addLayer(geoLayer);
+		
+		
+		var iconclustersInit = L.markerClusterGroup(
+	{
+		maxClusterRadius: 30,
+		singleMarkerMode: false,
+		zoomToBoundsOnClick: true,
+		spiderfyOnMaxZoom: true,
+		clusterPane: '630',
+		iconCreateFunction: function(cluster)
+		{
+			var markers = cluster.getAllChildMarkers();
+			var n = markers.length;
+			var e = n * 6;
+			var f = e;
+			return L.divIcon(
+			{
+				html: '<p style="line-height:'+f+'px;margin:auto;">'+markers.length+'</p>',
+				className: 'mycluster',
+				iconSize: L.point(e, e)
+			});
+		},
+	});
+	iconclustersInit.addLayer(geoLayer);
+    map.addLayer(iconclustersInit);
 	console.log (geoLayer);
   });
  
