@@ -20,7 +20,7 @@ padding: 0;
 	
 }
 header{
-	background-color:grey;
+	/*background-color:grey;*/
 	padding-left:2%;
 	height: auto;
 }
@@ -42,13 +42,13 @@ header{
 display: flex;
 flex-direction : row;
 height:85%;
-background-color: yellow;
+/*background-color: yellow;*/
 }
 
 .pied{
 	display:flex;
 	justify-content:space-around;
-	background-color: grey;
+	/*background-color: grey;*/
 	height: auto;
 	padding:1% 0;
 	align-items:center;
@@ -60,6 +60,7 @@ background-color: yellow;
 
 h1{font-size:1.2rem;}
 h2{font-size:1rem;font-weight:bolder;}
+small{font-size:.6rem;}
 
 .mycluster{
 	display:flex;
