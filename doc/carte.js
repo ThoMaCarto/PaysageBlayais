@@ -28,7 +28,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 		[55, 9]
 	],
 });
-map.setView([45.24724,-0.62619], 13);
+map.setView([45.24724,-0.62619], 11);
 
 /*///paramètrage de la vue dela carte
 var centerMaptest = [coucheTerritoires.getBounds().getCenter().lat,coucheTerritoires.getBounds().getCenter().lng];
@@ -71,7 +71,22 @@ var watercolor = L.tileLayer('http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jp
 	opacity: 0.8,
 	maxZoom: 19,
 	
-	}).addTo(map);
+	});
+	
+// création d'une couche "osmfr"
+//OSM FR utilise les données OSM avec une charte graphique développé pour le territoire français 
+var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+{
+	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>' + attribMARGINOV,
+	opacity: 0.6,
+	minZoom: minZoom,
+	maxZoom: maxZoom,
+	
+	bounds: [
+		[40, -6],
+		[55, 9]
+	],
+}).addTo(map);
 
 var maplabels = L.tileLayer('http://a.tile.stamen.com/toner-labels/{z}/{x}/{y}.png',{
 	attribution:'<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br><a href="http://maps.stamen.com/#watercolor/">Stamen</a>',
