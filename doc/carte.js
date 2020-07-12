@@ -39,6 +39,8 @@ function setMapCenter (centerMap){
 map.setView(setMapCenter (centerMap), zoomMap);*/
 
 //création des différents niveaux d'affichage des couches: les panes
+map.createPane('205');
+map.getPane('205').style.zIndex = 205;
 map.createPane('600');
 map.getPane('600').style.zIndex = 600;
 map.createPane('610');
@@ -61,21 +63,21 @@ var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
 	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br>' + attribMARGINOV,
 	opacity: 0.8,
 	maxZoom: 19,
-	pane:'600',
+	
 });
 
 var watercolor = L.tileLayer('http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',{
 	attribution:'<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br><a href="http://maps.stamen.com/#watercolor/">Stamen</a>',
 	opacity: 0.8,
 	maxZoom: 19,
-	pane: '600',
+	
 	}).addTo(map);
 
 var maplabels = L.tileLayer('http://a.tile.stamen.com/toner-labels/{z}/{x}/{y}.png',{
 	attribution:'<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br><a href="http://maps.stamen.com/#watercolor/">Stamen</a>',
 	opacity: 0.8,
 	maxZoom: 19,
-	pane:'610',
+	pane:'205',
 	}).addTo(map);
 
 
