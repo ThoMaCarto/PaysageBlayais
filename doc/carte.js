@@ -13,7 +13,7 @@ var map = L.map('map',
 //attribution
 var attribMARGINOV = '<b>Données</b> © <a href="http://www.marginov.cnrs.fr/?page_id=214">MARGINOV</a>'
 
-
+map.setView([45.24724,-0.62619], 11);
 //fond de carte
 // création d'une couche "osmfr"
 //OSM FR utilise les données OSM avec une charte graphique développé pour le territoire français 
@@ -21,11 +21,11 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 {
 	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>',
 	opacity: 0.7,
-	minZoom: 18,
-	maxZoom: 0,
+	minZoom: 9,
+	maxZoom: 18,
 	
 }).addTo(map);
-map.setView([45.24724,-0.62619], 11);
+
 
 /*///paramètrage de la vue dela carte
 var centerMaptest = [coucheTerritoires.getBounds().getCenter().lat,coucheTerritoires.getBounds().getCenter().lng];
