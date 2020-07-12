@@ -19,14 +19,11 @@ var attribMARGINOV = '<b>Données</b> © <a href="http://www.marginov.cnrs.fr/?p
 //OSM FR utilise les données OSM avec une charte graphique développé pour le territoire français 
 var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 {
-	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>' + attribMARGINOV,
-	opacity: 0.6,
+	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>',
+	opacity: 0.7,
 	minZoom: 18,
-	maxZoom: 9,
-	bounds: [
-		[40, -6],
-		[55, 9]
-	],
+	maxZoom: 0,
+	
 }).addTo(map);
 map.setView([45.24724,-0.62619], 11);
 
@@ -80,7 +77,7 @@ var maplabels = L.tileLayer('http://a.tile.stamen.com/toner-labels/{z}/{x}/{y}.p
 	opacity: 0.8,
 	maxZoom: 19,
 	pane:'205',
-	}).addTo(map);
+	});
 
 
 
