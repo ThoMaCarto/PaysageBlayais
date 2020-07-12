@@ -111,9 +111,9 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
     var geoLayer = L.geoCsv(csvContents, {
 		firstLineTitles: true, 
 		fieldSeparator: ';',
-		titles: ['name','Filename','Date','Auteur','User comment','lat', 'lng'],
+		titles: ['name','Filename','Date','Auteur','User comment','cat','lat', 'lng'],
 		onEachFeature:function (feature,layer){
-			layer.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées:</b>'+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
+			layer.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées:</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			
 		}
 		
