@@ -124,7 +124,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 	{
 		maxClusterRadius: 30,
 		singleMarkerMode: false,
-		zoomToBoundsOnClick: true,
+		zoomToBoundsOnClick: false,
 		spiderfyOnMaxZoom: true,
 		clusterPane: '630',
 		iconCreateFunction: function(cluster)
