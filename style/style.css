@@ -36,6 +36,8 @@ header{
 .panneau{
 	height:100%;
 	max-width:20vw;
+	padding:0 2%;
+	text-align:justify;
 }
 
 .info{
@@ -59,8 +61,10 @@ height:85%;
 .pied>img{height:30px; float:right;}
 
 h1{font-size:1.2rem;}
-h2{font-size:1rem;font-weight:bolder;}
+h2{font-size:1rem;font-weight:bold;}
 small{font-size:.6rem;}
+summary{font-size:1.1rem;font-weight:bold;}
+details>img{float:left;}
 
 .mycluster{
 	display:flex;
