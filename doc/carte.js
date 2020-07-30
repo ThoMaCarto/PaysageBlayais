@@ -106,7 +106,15 @@ north.addTo(map);
 
 ///Charger les données CSV
 
-function getMarkerColor(d){
+
+
+$.get('doc/db_img_blayais.csv', function(csvContents) {
+    var geoLayer = L.geoCsv(csvContents, {
+		firstLineTitles: true, 
+		fieldSeparator: ';',
+		titles: ['name','Filename','Date','Auteur','User comment','cat','lat', 'lng'],
+		pointToLayer: function (feature,latlng){
+			function getMarkerColor(d){
 	{
 	switch (d)
 	{
@@ -136,13 +144,6 @@ function getMarkerColor(d){
 	}
 }
 }
-
-$.get('doc/db_img_blayais.csv', function(csvContents) {
-    var geoLayer = L.geoCsv(csvContents, {
-		firstLineTitles: true, 
-		fieldSeparator: ';',
-		titles: ['name','Filename','Date','Auteur','User comment','cat','lat', 'lng'],
-		pointToLayer: function (feature,latlng){
 			var marker = L.circleMarker(latlng,{radius:10,fillColor:getMarkerCorlor(feature.properties.cat),opacity:0,color:'red',});
 			marker.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées :</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			return marker;
