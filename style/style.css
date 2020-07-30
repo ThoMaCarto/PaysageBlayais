@@ -73,7 +73,7 @@ height:85%;
 h1{font-size:1.2rem;}
 h2{font-size:1rem;font-weight:bold;}
 small{font-size:.6rem;}
-summary,span{font-size:1.1rem;font-weight:bold;}
+summary,span{font-size:1rem;font-weight:bold;}
 details>img{float:left;}
 
 .mycluster{
