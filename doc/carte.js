@@ -106,13 +106,44 @@ north.addTo(map);
 
 ///Charger les données CSV
 
+function getMarkerColor(d){
+	{
+	switch (d)
+	{
+		case "VRD":
+			return "#6F603D";
+		case "hydro":
+			return "#ECE8BE";
+		case "loisir":
+			return "#CDDE47";
+		case "patrimoine":
+			return "#413C3C";
+		case "excentre":
+			return "#778E60";
+		case "habitat":
+			return " #FFFCFA ";
+		case "edf":
+			return " #FF931C ";
+		case "agri":
+			return " #E82759 ";
+		case "reserve":
+			return " #630034 ";
+		case "citoyenneté":
+			return " #EACFB8 ";	
+			
+		default:
+			return "grey";
+	}
+}
+}
+
 $.get('doc/db_img_blayais.csv', function(csvContents) {
     var geoLayer = L.geoCsv(csvContents, {
 		firstLineTitles: true, 
 		fieldSeparator: ';',
 		titles: ['name','Filename','Date','Auteur','User comment','cat','lat', 'lng'],
 		pointToLayer: function (feature,latlng){
-			var marker = L.circleMarker(latlng,{radius:10,color:'blue',opacity:0.8,fillColor:'red',});
+			var marker = L.circleMarker(latlng,{radius:10,color:getMarkerCorlor(feature.properties.cat),opacity:0.8,fillColor:'red',});
 			marker.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées :</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			return marker;
 		}
