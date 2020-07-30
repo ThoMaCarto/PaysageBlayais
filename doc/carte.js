@@ -144,7 +144,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 	}
 }
 }
-			var marker = L.circleMarker(latlng,{radius:10,fillColor:getMarkerColor(feature.properties.cat),opacity:0,color:'red',});
+			var marker = L.circleMarker(latlng,{radius:10,fillColor:getMarkerColor(feature.properties.cat),fillOpacity:0.9,color:'red',});
 			marker.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées :</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			return marker;
 		}
