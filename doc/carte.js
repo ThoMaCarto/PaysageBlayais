@@ -53,7 +53,7 @@ map.getPane('635').style.zIndex = 635;
 
 
 
-// Ajouter la couche "osmfr" à la carte		
+// Ajouter ajout des tile layers	
 // création d'une couche "bwLayer" un fond de carte en grisaille
 var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
 {
@@ -111,10 +111,15 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		firstLineTitles: true, 
 		fieldSeparator: ';',
 		titles: ['name','Filename','Date','Auteur','User comment','cat','lat', 'lng'],
-		onEachFeature:function (feature,layer){
+		pointToLayer: function (feature,latlng){
+			var marker = L.circleMarker(latlng,{radius:10,color:"blue",opacity:0.8,fillColor:"red",});
+			marker.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées :</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
+			return marker;
+		}
+		/*onEachFeature:function (feature,layer){
 			layer.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées :</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			
-		}
+		}*/
 		
 		
 		});
