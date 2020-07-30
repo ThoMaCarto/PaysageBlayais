@@ -121,21 +121,21 @@ function getMarkerColor(d){
 		case "VRD":
 			return "#6F603D";
 		case "hydro":
-			return "#ECE8BE";
+			return "#4EA9A0";
 		case "loisir":
-			return "#CDDE47";
+			return "#FF931C";
 		case "patrimoine":
 			return "#413C3C";
 		case "excentre":
-			return "#778E60";
+			return "#E82759";
 		case "habitat":
-			return " #FFFCFA ";
+			return " #FFFCFA";
 		case "edf":
-			return " #FF931C ";
+			return " #FFD133";
 		case "agri":
-			return " #E82759 ";
+			return " #778E60";
 		case "reserve":
-			return " #630034 ";
+			return " #969514 ";
 		case "citoyenneté":
 			return " #EACFB8 ";	
 			
@@ -189,21 +189,21 @@ function getMarkerColor(d){
 		case "VRD":
 			return "#6F603D";
 		case "hydro":
-			return "#ECE8BE";
+			return "#4EA9A0";
 		case "loisir":
-			return "#CDDE47";
+			return "#FF931C";
 		case "patrimoine":
 			return "#413C3C";
 		case "excentre":
-			return "#778E60";
+			return "#E82759";
 		case "habitat":
-			return " #FFFCFA ";
+			return " #FFFCFA";
 		case "edf":
-			return " #FF931C ";
+			return " #FFD133";
 		case "agri":
-			return " #E82759 ";
+			return " #778E60";
 		case "reserve":
-			return " #630034 ";
+			return " #969514 ";
 		case "citoyenneté":
 			return " #EACFB8 ";	
 			
