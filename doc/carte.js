@@ -159,7 +159,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		
 		var iconclustersInit = L.markerClusterGroup(
 	{
-		maxClusterRadius: 10,
+		maxClusterRadius: 5,
 		singleMarkerMode: false,
 		zoomToBoundsOnClick: true,
 		spiderfyOnMaxZoom: true,
