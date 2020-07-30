@@ -114,7 +114,7 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
 		fieldSeparator: ';',
 		titles: ['name','Filename','Date','Auteur','User comment','cat','lat', 'lng'],
 		pointToLayer: function (feature,latlng){
-			function getMarkerColor(d){
+function getMarkerColor(d){
 	{
 	switch (d)
 	{
@@ -182,5 +182,57 @@ $.get('doc/db_img_blayais.csv', function(csvContents) {
     map.addLayer(iconclustersInit);
 	console.log (geoLayer);
   });
- 
+ function getMarkerColor(d){
+	{
+	switch (d)
+	{
+		case "VRD":
+			return "#6F603D";
+		case "hydro":
+			return "#ECE8BE";
+		case "loisir":
+			return "#CDDE47";
+		case "patrimoine":
+			return "#413C3C";
+		case "excentre":
+			return "#778E60";
+		case "habitat":
+			return " #FFFCFA ";
+		case "edf":
+			return " #FF931C ";
+		case "agri":
+			return " #E82759 ";
+		case "reserve":
+			return " #630034 ";
+		case "citoyenneté":
+			return " #EACFB8 ";	
+			
+		default:
+			return "grey";
+	}
+}
+}
+
+///Création de la légende sur la droite
+var labelLegend = ["Habitat","VRD","Hydrographie","Equipements publics","Patrimoine","excentre","edf","Agriculture","Réserves Naturelles",];
+var infoLegend = ["L'implantation de la centrale s'est accompagnée du développement d'un parc immobilier important pour les salariés de la centrale sous la forme de lotissement en périphérie des bourgs.",
+"La construction de la centrale nucléaire du Blayais a profondément bouleversé les réseaux de circulation par la création de voies adaptées aux véhicules lourds de chantiers. Cela à des conséquences sur la morphologie des agglomérations alentours et leurs connexions aux axes de circulation.",
+"Implanté dans un marais, l'installation de la centrale et l'évolution des activités alentour ont modifié le fonctionnement hydrologique de cette zone humide.",
+"La rétrocession des terrains utilisés par EDF pour loger les ouvriers de la construction de la centrale aux communes, les retombées fiscales de la centrale, ont fourni des ressources foncières et financières aux communes avoisinantes souvent réinvesties sous la forme d'équipements culturels, de loisir et commerciaux.Ceux-ci peuvent être perçus comme un élément important de la qualité de vie des habitants, mais apparaissent parfois surdimensionnés au regard de la population. Certains sont aujourd'hui abandonnés.",
+"",
+"",
+"",
+"L'emprise foncière d'EDF dans les marais à modifier la morphologie des espaces cultivés (remembrement), ainsi que les modes de culture avec une réapparition d'openfields, là où persistait un paysage de bocage antérieurement.",
+"Les gravières fournissant les matériaux de construction de la centrale ont été en partie transformées en réserves ornithologiques.",];
+var catLegend =["habitat","VRD","hydro","loisir","patrimoine","excentre","edf","agri","reserve",];
+
+var divLegend = document.getElementById('panneau');
+
+var legend = '';
+for (var i = 0; i < labelLegend.length; i++){
+	legend += '<div class="divicone" style="background-color:'+getMarkerColor(catLegend[i])+';"></div><span>'+labelLegend[i]+'</span><details><p>'+infoLegend[i]+'</p></details><br/>'
+};
+
+divLegend.innerHTML = legend;
+
 

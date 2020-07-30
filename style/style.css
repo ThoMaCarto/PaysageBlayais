@@ -28,18 +28,24 @@ header{
 
 #map{
 	height: 100%;
-	min-width: 80vw;
+	min-width: 70vw;
 	/*background-color: pink;*/
 	
 }
 
 .panneau{
 	height:100%;
-	max-width:20vw;
+	max-width:30vw;
 	padding:0 2%;
-	text-align:justify;
+	
 	overflow:auto;
 }
+
+.panneau>p{
+	text-indent:50px;
+	
+	float:right;
+	}
 
 .info{
 display: flex;
@@ -64,7 +70,7 @@ height:85%;
 h1{font-size:1.2rem;}
 h2{font-size:1rem;font-weight:bold;}
 small{font-size:.6rem;}
-summary{font-size:1.1rem;font-weight:bold;}
+summary,span{font-size:1.1rem;font-weight:bold;}
 details>img{float:left;}
 
 .mycluster{
@@ -84,7 +90,7 @@ details>img{float:left;}
 }
 
 .divicone{
-	float:left;
+	float:right;
 	width:15px;
 	height:15px;
 	border: 1px solid black;
