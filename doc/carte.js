@@ -144,7 +144,7 @@ function getMarkerColor(d){
 	}
 }
 }
-			var marker = L.circleMarker(latlng,{radius:10,fillColor:getMarkerColor(feature.properties.cat),fillOpacity:0.9,color:'black',weight:1,});
+			var marker = L.circleMarker(latlng,{radius:8,fillColor:getMarkerColor(feature.properties.cat),fillOpacity:0.9,color:'black',weight:1,});
 			marker.bindPopup('<b>'+feature.properties.name+'</b><br/><b>Coordonnées :</b> '+feature.geometry.coordinates+'<br/><img src="'+feature.properties.filename+'" alt="test" width="300"><br/><small>photographie © '+feature.properties.auteur+'</small><br/><p>'+feature.properties.user_comment+'</p>');
 			return marker;
 		}
