@@ -36,9 +36,9 @@ header{
 .panneau{
 	height:100%;
 	max-width:30vw;
-	padding:0 2%;
+	padding:0 0 0 2%;
 	
-	overflow:auto;
+	overflow-y:scroll;
 }
 
 .panneau>p{
@@ -50,7 +50,10 @@ header{
 .info{
 display: flex;
 flex-direction : row;
+justify-content:start;
 height:85%;
+
+
 /*background-color: yellow;*/
 }
 
