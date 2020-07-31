@@ -235,4 +235,17 @@ for (var i = 0; i < labelLegend.length; i++){
 
 divLegend.innerHTML = legend;
 
+//Magnific popup
+$(document).ready(function() {
+$('.leaflet-popup-content').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
 
