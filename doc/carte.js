@@ -236,6 +236,7 @@ for (var i = 0; i < labelLegend.length; i++){
 divLegend.innerHTML = legend;
 
 //Magnific popup
+map.on('click', 
 $(document).ready(function() {
 $('.leaflet-popup-content').find('img').magnificPopup({
 		type:'image',
@@ -248,4 +249,4 @@ $('.leaflet-popup-content').find('img').magnificPopup({
 
 });
 
-
+ );
