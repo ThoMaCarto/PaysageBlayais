@@ -42,6 +42,10 @@
 	<!-- <script src="territoires.json"></script>
 	<script src="initiatives.json"></script> -->
 	
+	<script type="text/javascript" src="dist/jquery.magnific-popup.js"></script>
+	<link rel="stylesheet" href="dist/magnific-popup.css">
+
+	
 	
    
    
@@ -74,6 +78,17 @@
 <footer>
 
 <script>
+$(document).ready(function() {
+$('.info').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
 
 
 </script>
