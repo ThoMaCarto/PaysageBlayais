@@ -220,8 +220,8 @@ var infoLegend = ["L'implantation de la centrale s'est accompagnée du développ
 "Implanté dans un marais, l'installation de la centrale et l'évolution des activités alentour ont modifié le fonctionnement hydrologique de cette zone humide.",
 "La rétrocession des terrains utilisés par EDF pour loger les ouvriers de la construction de la centrale aux communes, les retombées fiscales de la centrale, ont fourni des ressources foncières et financières aux communes avoisinantes souvent réinvesties sous la forme d'équipements culturels, de loisir et commerciaux.Ceux-ci peuvent être perçus comme un élément important de la qualité de vie des habitants, mais apparaissent parfois surdimensionnés au regard de la population. Certains sont aujourd'hui abandonnés.",
 "Quelques lieux gardent des traces des anciennes activités.",
-"La modification des réseaux de circulation a profondément bouleversé la morphologie de certains villages en isolant l'ancien centre et en créant de nouvelles centralités le longs des axes de circulations majeures.",
-"L'ensemble des infrastructure de production et de distribution de l'électricité ont profondément modifiée le paysage.",
+"La modification des réseaux de circulation a profondément bouleversé la morphologie de certains villages en isolant l'ancien centre et en créant de nouvelles centralités le long des axes de circulations majeures.",
+"L'ensemble des infrastructures de production et de distribution de l'électricité ont profondément modifié le paysage.",
 "L'emprise foncière d'EDF dans les marais à modifier la morphologie des espaces cultivés (remembrement), ainsi que les modes de culture avec une réapparition d'openfields, là où persistait un paysage de bocage antérieurement.",
 "Les gravières fournissant les matériaux de construction de la centrale ont été en partie transformées en réserves ornithologiques.",];
 var catLegend =["habitat","VRD","hydro","loisir","patrimoine","excentre","edf","agri","reserve",];
