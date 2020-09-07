@@ -228,9 +228,9 @@ var catLegend =["habitat","VRD","hydro","loisir","patrimoine","excentre","edf","
 
 var divLegend = document.getElementById('panneau');
 
-var legend = '';
+var legend = '<hr/>';
 for (var i = 0; i < labelLegend.length; i++){
-	legend += '<div class="divicone" style="background-color:'+getMarkerColor(catLegend[i])+';"></div><span>'+labelLegend[i]+'</span><details><p>'+infoLegend[i]+'</p></details><br/>'
+	legend += '<div class="divicone" style="background-color:'+getMarkerColor(catLegend[i])+';"></div><span>'+labelLegend[i]+'</span><details><p>'+infoLegend[i]+'</p></details><hr/>'
 };
 
 divLegend.innerHTML = legend;
