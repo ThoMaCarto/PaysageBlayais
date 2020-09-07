@@ -180,7 +180,7 @@ function getMarkerColor(d){
 	});
 	iconclustersInit.addLayer(geoLayer);
     map.addLayer(iconclustersInit);
-	console.log (geoLayer);
+	/*console.log (geoLayer);*/
   });
  function getMarkerColor(d){
 	{
