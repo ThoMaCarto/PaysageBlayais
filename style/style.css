@@ -60,10 +60,10 @@ height:85%;
 
 .pied{
 	display:flex;
-	justify-content:space-around;
+	justify-content:space-between;
 	/*background-color: grey;*/
 	height: auto;
-	padding:1% 0;
+	padding:1%;
 	align-items:center;
 	
 	
