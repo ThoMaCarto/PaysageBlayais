@@ -25,6 +25,11 @@ header{
 	height: auto;
 }
 
+.titre{
+	display:flex;
+	flex-direction:row;
+}
+
 
 #map{
 	height: 100%;
