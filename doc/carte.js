@@ -78,6 +78,13 @@ var maplabels = L.tileLayer('http://a.tile.stamen.com/toner-labels/{z}/{x}/{y}.p
 	maxZoom: 19,
 	pane:'205',
 	});
+	
+var stamenToner = L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png',{
+	attribution:'<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br><a href="http://maps.stamen.com/#toner/">Stamen</a>',
+	opacity: 0.8,
+	maxZoom: 19,
+	pane:'205',
+	});
 
 
 
@@ -248,6 +255,7 @@ var baseMaps = {
 	"Standard":osmfr,
 	"grisaille":bwLayer,
     "Aquarelle": watercolor,
+	"Noir et blanc": stamenToner,
 };
 
 var overlayMaps ={
