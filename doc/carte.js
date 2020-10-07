@@ -81,6 +81,10 @@ var maplabels = L.tileLayer('http://a.tile.stamen.com/toner-labels/{z}/{x}/{y}.p
 
 
 
+
+
+
+
 //échelle
 L.control.scale(
 {
@@ -181,6 +185,21 @@ function getMarkerColor(d){
 	iconclustersInit.addLayer(geoLayer);
     map.addLayer(iconclustersInit);
 	/*console.log (geoLayer);*/
+	
+	
+	// Ajout Control.Layers Leaflet
+var baseMaps = {
+	"Standard":osmfr,
+	"grisaille":bwLayer,
+    "Aquarelle": watercolor,
+};
+
+var overlayMaps ={
+	//"points":geoLayer,
+	"aggrégats":iconclustersInit,
+};
+
+ L.Control.Layers(baseMaps, overlayMaps, { collapsed: false, });
   });
  function getMarkerColor(d){
 	{
@@ -234,4 +253,6 @@ for (var i = 0; i < labelLegend.length; i++){
 };
 
 divLegend.innerHTML = legend;
+
+
 
