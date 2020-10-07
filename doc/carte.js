@@ -192,10 +192,7 @@ function getMarkerColor(d){
 	iconclustersInit.addLayer(geoLayer);
     map.addLayer(iconclustersInit);
 	/*console.log (geoLayer);*/
-	var overlayMaps ={
-	"points":geoLayer,
-	"aggrégats":iconclustersInit,
-};
+	
 
   });
  function getMarkerColor(d){
@@ -261,7 +258,10 @@ var baseMaps = {
 	"Noir et blanc": stamenToner,
 };
 
-
+var overlayMaps ={
+	"points":geoLayer,
+	"aggrégats":iconclustersInit,
+};
 
  L.control.layers(baseMaps, overlayMaps).addTo(map);
  ///////
