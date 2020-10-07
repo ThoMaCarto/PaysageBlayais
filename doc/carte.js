@@ -255,5 +255,5 @@ var overlayMaps ={
 	"aggrégats":iconclustersInit,
 };
 
- L.Control.Layers(baseMaps, overlayMaps, { collapsed: false, });
+ L.control.layers(baseMaps, overlayMaps).addTo(map);
  ///////
