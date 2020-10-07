@@ -251,8 +251,8 @@ var baseMaps = {
 };
 
 var overlayMaps ={
-	"points":geoLayer,
-	"aggrégats":iconclustersInit,
+	//"points":geoLayer,
+	//"aggrégats":iconclustersInit,
 };
 
  L.control.layers(baseMaps, overlayMaps).addTo(map);
